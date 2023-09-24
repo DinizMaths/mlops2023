@@ -4,6 +4,6 @@ Welcome to the repository dedicated to the course of Machine Learning-Based Syst
 
 # Projects
 
-[Python Essential for MLOps](./Python_Essentials_for_MLOps/)
+📁 [Python Essential for MLOps](./Python_Essentials_for_MLOps/)
 
 # References
