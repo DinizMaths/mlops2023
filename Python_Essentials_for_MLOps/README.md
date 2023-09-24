@@ -4,9 +4,9 @@
 
 [🎯 Project 01](./Project%2001/) - Short Description
 
-[🎯 Project 02](./Project%2001/) - Short Description
+[🎯 Project 02](./Project%2002/) - Short Description
 
-[🎯 Project 03](./Project%2001/) - Short Description
+[🎯 Project 03](./Project%2003/) - Short Description
 
 # References
 
