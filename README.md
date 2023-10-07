@@ -12,10 +12,10 @@ MLOps embodies a collection of methodologies designed to streamline workflow pro
 
 MLOps encompasses not only best practices but also essential processes and supporting technologies. It offers a scalable, centralized, and well-governed framework to enhance machine learning endeavors.
 
-<div align="center">
-    <img src="https://blogs.nvidia.com/wp-content/uploads/2020/09/1-MLOps-NVIDIA-invert-final.jpg">
+<div style="text-align: center;">
+  <img src="https://blogs.nvidia.com/wp-content/uploads/2020/09/1-MLOps-NVIDIA-invert-final.jpg" alt="NVIDIA MLOps">
 
-    Image from [NVIDIA](https://blogs.nvidia.com/blog/2020/09/03/what-is-mlops/)
+Image by [NVIDIA](https://blogs.nvidia.com/blog/2020/09/03/what-is-mlops/)
 </div>
 
 # Projects
