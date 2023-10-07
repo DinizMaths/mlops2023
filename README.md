@@ -6,17 +6,15 @@ My name is **Matheus Diniz**, and I am a student at Universidade Federal do Rio 
 - [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/dinizmaths)
 - [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DinizMaths)
 
-## What is Machine?
+## What is Machine Learning Operations?
 
 MLOps embodies a collection of methodologies designed to streamline workflow processes and automate the deployment of machine learning and deep learning models. It effectively facilitates the reliable and efficient deployment and maintenance of models in production, even at a significant scale.
 
 MLOps encompasses not only best practices but also essential processes and supporting technologies. It offers a scalable, centralized, and well-governed framework to enhance machine learning endeavors.
 
-<div style="text-align: center;">
-  <img src="https://blogs.nvidia.com/wp-content/uploads/2020/09/1-MLOps-NVIDIA-invert-final.jpg" alt="NVIDIA MLOps">
+<img src="https://blogs.nvidia.com/wp-content/uploads/2020/09/1-MLOps-NVIDIA-invert-final.jpg" alt="NVIDIA MLOps">
 
 Image by [NVIDIA](https://blogs.nvidia.com/blog/2020/09/03/what-is-mlops/)
-</div>
 
 # Projects
 
