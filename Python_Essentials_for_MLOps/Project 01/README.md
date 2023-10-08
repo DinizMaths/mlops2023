@@ -87,3 +87,7 @@ $ pylint utils.py
 # 📚 References
 
 [🌐 **Build a Movie Recommendation System in Python**](https://app.dataquest.io/c/93/m/99994/build-a-movie-recommendation-system-in-python/)
+
+[🌐 **Pytest**](https://docs.pytest.org/en/7.4.x/)
+
+[🌐 **Pylintt**](https://docs.pylint.org)
