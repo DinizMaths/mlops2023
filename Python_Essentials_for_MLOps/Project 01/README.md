@@ -43,7 +43,7 @@ The output will be:
 You can also set the number of recommendations using the `--size <SIZE_NEEDED>` argument. Example:
 
 ```
-$ python main.py --movie-title "Toy Story (1995) --size 10"
+$ python main.py --movie-title "Toy Story (1995)" --size 10
 ```
 
 <img src="./imgs/running_project_set_size.png">
