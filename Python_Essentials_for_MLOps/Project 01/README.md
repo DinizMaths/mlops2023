@@ -1,6 +1,10 @@
 # Description
 
+This project is a simple movie recommendation system. It uses the [MovieLens dataset](https://grouplens.org/datasets/movielens/), which contains 25 million ratings and one million tag applications applied to 62,000 movies by 162,000 users.
+
 # Requirements
+
+
 
 # Instalation
 
