@@ -50,6 +50,10 @@ airflow standalone
 
 (Optional) If you don't want to load the examples, you can change the configuration file. In `./airflow/airflow.cfg`, change the value of `load_examples` to `False`. This will prevent the examples from being loaded.
 
+```bash
+sed -i 's/^load_examples = .*/load_examples = False/' airflow.cfg
+```
+
 Now in **other terminal**, you can run the following command to create the `episodes` folder:
 
 ```bash
@@ -99,7 +103,9 @@ Your podcasts was downloaded successfully! 🎉
 
 And you can find the downloaded podcasts in `./airflow/episodes/`.
 
-# References
+(Optional) You can run other versions of the DAG that uses decorators. The file is `./airflow/dags/podcast_summary_old.py`
+
+# 📚 References
 
 [🌐 **Build an Airflow Data Pipeline to Download Podcasts**](https://app.dataquest.io/c/93/m/999911/build-an-airflow-data-pipeline-to-download-podcasts/)
 
