@@ -1,6 +1,11 @@
 # 📝 Description
 
-Airflow is a platform created by Airbnb. It is a very powerful tool that can be used to automate a lot of tasks. In this project, we will use Airflow to download podcasts from the [Marketplace]( https://www.marketplace.org/feed/podcast/marketplace/).
+Airflow is a platform created by Airbnb. It is a very powerful tool that can be used to automate a lot of tasks. 
+
+<img src="https://airflow.apache.org/blog/airflow-2.7.0/graph_in_grid.png">
+
+In this project, we will use Airflow to **download podcasts** from the [**Marketplace**]( https://www.marketplace.org/feed/podcast/marketplace/).
+
 
 
 # 📦 Instalation
@@ -23,21 +28,15 @@ For a better experience, I recommend you to create a virtual environment and act
 $ pip install -r requirements.txt
 ```
 
-Now, you will need to install Airflow. Use the following commands:
+Now, you will need to set the `AIRFLOW_HOME` environment variable. You can do this by running the following command:
 
 ```bash
 export AIRFLOW_HOME=$(pwd)/airflow
-
-export AIRFLOW_VERSION=2.7.1
-export PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
-export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
-
-pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 ```
 
 # 🚀 Usage
 
-After installing Airflow, you need to initialize the database:
+After set the Airflow home, you need to initialize the database:
 
 ```bash
 airflow db init
@@ -51,10 +50,9 @@ airflow standalone
 
 (Optional) If you don't want to load the examples, you can change the configuration file. In `./airflow/airflow.cfg`, change the value of `load_examples` to `False`. This will prevent the examples from being loaded.
 
-Now in **other terminal**, you can run the following command to create the necessary folders:
+Now in **other terminal**, you can run the following command to create the `episodes` folder:
 
 ```bash
-mkdir ./airflow/dags
 mkdir ./airflow/episodes
 ```
 
@@ -81,21 +79,25 @@ cd ../
 At this point, you can run the following command to create the `podcasts` connection:
 
 ```bash
+export AIRFLOW_HOME=$(pwd)/airflow
 export CONN_HOST=${AIRFLOW_HOME}/episodes.db
 airflow connections add 'podcasts' --conn-type 'sqlite' --conn-host "${CONN_HOST}"
-airflow connections get 'podcasts'
 ```
 
-At last, you can open the [Airflow](http://localhost:8080/home) UI in your browser. It will needs a username and password. The default username is `admin` and the password is located in `./airflow/standalone_admin_password.txt`.
+At last, you can open the [**Airflow UI**](http://localhost:8080/home) in your browser. It will needs a username and password. The default username is `admin` and the password is located in `./airflow/standalone_admin_password.txt`.
 
 After running the DAG called `podcast_summary`, if your result is similar to the following image:
 
 <img src="./imgs/success_airflow.png" >
 
-Your podcast was downloaded successfully! 🎉
+Your podcasts was downloaded successfully! 🎉
 
-And you can find the downloaded podcast in `./airflow/episodes/`.
+And you can find the downloaded podcasts in `./airflow/episodes/`.
 
 # References
 
 [🌐 **Build an Airflow Data Pipeline to Download Podcasts**](https://app.dataquest.io/c/93/m/999911/build-an-airflow-data-pipeline-to-download-podcasts/)
+
+[🌐 **Apache Airflow**](https://airflow.apache.org)
+
+[🌐 **SQLite**](https://www.sqlite.org/index.html)
