@@ -86,7 +86,12 @@ airflow connections add 'podcasts' --conn-type 'sqlite' --conn-host "${CONN_HOST
 
 At last, you can open the [**Airflow UI**](http://localhost:8080/home) in your browser. It will needs a username and password. The default username is `admin` and the password is located in `./airflow/standalone_admin_password.txt`.
 
-After running the DAG called `podcast_summary`, if your result is similar to the following image:
+Only one step before running the DAG. You need to change the value of `EPISODE_FOLDER` inside `./airflow/dags/podcast_summary.py` to the path of the `episodes` folder. If you want to know the path, you can run the following command:
+
+```bash
+echo $(pwd)/airflow/episodes
+```
+Now, you can run the DAG. After running the DAG called `podcast_summary`, if your result is similar to the following image:
 
 <img src="./imgs/success_airflow.png" >
 
