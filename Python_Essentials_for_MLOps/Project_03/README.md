@@ -9,7 +9,7 @@ $ git clone https://github.com/DinizMaths/mlops2023.git
 ```
 
 ```bash
-$ cd mlops2023/Python_Essentials_for_MLOps/"Project 03"/
+$ cd mlops2023/Python_Essentials_for_MLOps/Project_03/
 ```
 
 ```

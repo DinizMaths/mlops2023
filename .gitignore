@@ -2,3 +2,12 @@ venv-**/
 data/
 
 __pycache__/
+
+logs/
+episodes/
+airflow-webserver.pid
+airflow.cfg
+*.db
+standalone_admin_password.txt
+webserver_config.py
+sqlite3

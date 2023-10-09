@@ -1,7 +1,7 @@
 # 📝 Description
 
-This project is a simple example of how to use Airflow to download podcasts. The podcasts are downloaded from the following link:
- https://www.marketplace.org/feed/podcast/marketplace/
+Airflow is a platform created by Airbnb. It is a very powerful tool that can be used to automate a lot of tasks. In this project, we will use Airflow to download podcasts from the [Marketplace]( https://www.marketplace.org/feed/podcast/marketplace/).
+
 
 # 📦 Instalation
 

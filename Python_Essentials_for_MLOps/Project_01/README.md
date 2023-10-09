@@ -2,8 +2,6 @@
 
 This project is a simple movie recommendation system. It uses the [MovieLens dataset](https://grouplens.org/datasets/movielens/), which contains 25 million ratings and one million tag applications applied to 62,000 movies by 162,000 users.
 
-
-
 # 📦 Instalation
 
 To reproduce this project, you need to clone this repository:
@@ -15,7 +13,7 @@ $ git clone https://github.com/DinizMaths/mlops2023.git
 Now, you need to change the directory to the project folder:
 
 ```bash
-$ cd mlops2023/Python_Essentials_for_MLOps/"Project 01"/
+$ cd mlops2023/Python_Essentials_for_MLOps/Project_01/
 ```
 
 For a better experience, I recommend you to create a virtual environment and activate it. Finally, you need to install the requirements:
