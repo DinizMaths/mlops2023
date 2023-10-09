@@ -94,11 +94,11 @@ You can read more about in [**Logging in Python**](https://docs.python.org/3/lib
 
 # Projects
 
-[**🎯 Project 01**](./Project%2001/) - **Movie Recommendation System in Python**
+[**🎯 Project 01**](./Project_01/) - **Movie Recommendation System in Python**
 
-[**🎯 Project 02**](./Project%2002/) - **Airflow Data Pipeline to Download Podcasts**
+[**🎯 Project 02**](./Project_02/) - **Airflow Data Pipeline to Download Podcasts**
 
-[**🎯 Project 03**](./Project%2003/) - **Optimizing Model Prediction**
+[**🎯 Project 03**](./Project_03/) - **Optimizing Model Prediction**
 
 # References
 
