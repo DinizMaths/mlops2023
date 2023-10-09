@@ -1,3 +1,5 @@
+"""A DAG to download and store podcast episodes as mp3"""
+
 import os
 import requests
 import xmltodict
@@ -14,7 +16,13 @@ EPISODE_FOLDER = "/home/matheus/mlops2023/Python_Essentials_for_MLOps/Project_02
 FRAME_RATE = 16000
 
 def get_episodes():
-    data = requests.get(PODCAST_URL)
+    """
+    Retrieves podcast episodes from a specified URL and returns them as a list.
+
+    Returns:
+        list: A list of podcast episodes.
+    """
+    data = requests.get(PODCAST_URL, timeout=10)
     feed = xmltodict.parse(data.text)
     episodes = feed["rss"]["channel"]["item"]
 
@@ -23,6 +31,16 @@ def get_episodes():
     return episodes
 
 def download_episodes(episodes):
+    """
+    Downloads audio files for the given list of podcast episodes and returns 
+    a list of downloaded file information.
+
+    Args:
+        episodes (list): A list of podcast episodes.
+
+    Returns:
+        list: A list of dictionaries containing information about the downloaded files.
+    """
     audio_files = []
 
     for episode in episodes:
@@ -33,7 +51,7 @@ def download_episodes(episodes):
         if not os.path.exists(audio_path):
             print(f"Downloading {filename}")
 
-            audio = requests.get(episode["enclosure"]["@url"])
+            audio = requests.get(episode["enclosure"]["@url"], timeout=10)
 
             with open(audio_path, "wb+") as f:
                 f.write(audio.content)
@@ -46,6 +64,15 @@ def download_episodes(episodes):
     return audio_files
 
 def load_episodes(episodes):
+    """
+    Loads podcast episodes into a SQLite database if they are not already present.
+
+    Args:
+        episodes (list): A list of podcast episodes.
+
+    Returns:
+        list: A list of new episodes added to the database.
+    """
     hook = SqliteHook(sqlite_conn_id="podcasts")
     stored_episodes = hook.get_pandas_df("SELECT * from episodes;")
     new_episodes = []
@@ -55,21 +82,21 @@ def load_episodes(episodes):
             filename = f"{ episode['link'].split('/')[-1] }.mp3"
 
             new_episodes.append([
-                episode["link"], 
-                episode["title"], 
-                episode["pubDate"], 
-                episode["description"], 
+                episode["link"],
+                episode["title"],
+                episode["pubDate"],
+                episode["description"],
                 filename
             ])
 
     hook.insert_rows(
-        table="episodes", 
-        rows=new_episodes, 
+        table="episodes",
+        rows=new_episodes,
         target_fields=[
-            "link", 
-            "title", 
-            "published", 
-            "description", 
+            "link",
+            "title",
+            "published",
+            "description",
             "filename"
         ]
     )
@@ -77,11 +104,18 @@ def load_episodes(episodes):
     return new_episodes
 
 
-with DAG(dag_id="podcast_summary", schedule_interval="@daily", start_date=pendulum.datetime(2023, 10, 9), catchup=False) as dag:
+with DAG(
+    dag_id="podcast_summary",
+    schedule_interval="@daily",
+    start_date=pendulum.datetime(2023, 10, 9),
+    catchup=False
+) as dag:
     task_create_table_sql = SqliteOperator(
         task_id="create_table_sqlite",
         sql=r"""
-        CREATE TABLE IF NOT EXISTS episodes (
+        CREATE TABLE 
+        IF NOT EXISTS 
+        episodes (
             link TEXT PRIMARY KEY,
             title TEXT,
             filename TEXT,
@@ -96,8 +130,14 @@ with DAG(dag_id="podcast_summary", schedule_interval="@daily", start_date=pendul
         task_id="get_episodes",
         python_callable=get_episodes
     )
-    task_download_episodes = PythonOperator(task_id="download_episodes", python_callable=download_episodes)
-    task_load_episodes = PythonOperator(task_id="load_episodes", python_callable=load_episodes)
+    task_download_episodes = PythonOperator(
+        task_id="download_episodes",
+        python_callable=download_episodes
+    )
+    task_load_episodes = PythonOperator(
+        task_id="load_episodes",
+        python_callable=load_episodes
+    )
 
 task_create_table_sql.set_downstream(task_get_episodes)
 task_get_episodes.set_downstream([

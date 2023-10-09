@@ -103,7 +103,21 @@ Your podcasts was downloaded successfully! 🎉
 
 And you can find the downloaded podcasts in `./airflow/episodes/`.
 
-(Optional) You can run other versions of the DAG that uses decorators. The file is `./airflow/dags/podcast_summary_old.py`
+(Optional) You can run other versions of the DAG that uses decorators. The file is `./airflow/dags/podcast_summary_old.py`. This code is addapted from Dataquest's course.
+
+# 💯 Code Lint
+
+A linttool is a tool that analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs. In this project, I used the [pylint](https://docs.pylint.org) library to lint the code. The results of the code lint is shown below:
+
+## `podcast_summary.py`
+
+<img src="./imgs/pylint_podcast_summary.png">
+
+You can also lint the code using the following command:
+
+```
+$ pylint ./airflow/dags/podcast_summary.py
+```
 
 # 📚 References
 
