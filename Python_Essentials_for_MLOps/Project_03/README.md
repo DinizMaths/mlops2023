@@ -4,6 +4,8 @@ This project is a system to analyze the parameters impact on the model performan
 
 Optimization is a very important step in the machine learning pipeline. It is the process of finding the best set of hyperparameters for a model. Hyperparameters are the parameters that are not learned by the model. They are set by the data scientist before training the model.
 
+The data used in this project is the [Forest Fires](https://archive.ics.uci.edu/dataset/162/forest+fires)
+
 # 📦 Instalation
 
 To reproduce this project, you need to clone this repository:
