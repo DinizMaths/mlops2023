@@ -2,6 +2,8 @@ venv-**/
 data/
 
 __pycache__/
+.pytest_cache/
+.vscode
 
 logs/
 episodes/
@@ -11,3 +13,6 @@ airflow.cfg
 standalone_admin_password.txt
 webserver_config.py
 sqlite3
+
+.Identifier
+.log

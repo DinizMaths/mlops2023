@@ -4,7 +4,7 @@ Welcome to the repository dedicated to the course of **Machine Learning-Based Sy
 
 My name is **Matheus Diniz**, and I am a student at Universidade Federal do Rio Grande do Norte (UFRN). If you want to know more about me, check out:
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/dinizmaths)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dinizmaths/)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DinizMaths)
 
 ## 🤔 What is Machine Learning Operations?
