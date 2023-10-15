@@ -102,7 +102,7 @@ You can read more about in [**Logging in Python**](https://docs.python.org/3/lib
 
 # References
 
-[🎥 **Video**](./)
+[🎥 **Video**](https://youtu.be/mMltyggT_KQ)
 
 [🏅 **Intermediate Python for Web Development**](https://app.dataquest.io/view_cert/17W0Y3SZ1DA64H7NVTE5)
 
