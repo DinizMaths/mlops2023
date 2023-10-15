@@ -101,7 +101,11 @@ Now, you can run the DAG. After running the DAG called `podcast_summary`, if you
 
 Your podcasts was downloaded successfully! 🎉
 
-And you can find the downloaded podcasts in `./airflow/episodes/`.
+And you can find the downloaded podcasts in `./airflow/episodes/`. O using:
+
+```bash
+ls $(pwd)/airflow/episodes -1
+```
 
 (Optional) You can run other versions of the DAG that uses decorators. The file is `./airflow/dags/podcast_summary_old.py`. This code is addapted from Dataquest's course.
 
