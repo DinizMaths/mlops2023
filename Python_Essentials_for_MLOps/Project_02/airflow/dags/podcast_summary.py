@@ -15,7 +15,7 @@ PODCAST_URL = "https://www.marketplace.org/feed/podcast/marketplace/"
 EPISODE_FOLDER = "/home/matheus/mlops2023/Python_Essentials_for_MLOps/Project_02/airflow/episodes"
 FRAME_RATE = 16000
 
-def get_episodes():
+def get_episodes(**context):
     """
     Retrieves podcast episodes from a specified URL and returns them as a list.
 
@@ -28,9 +28,9 @@ def get_episodes():
 
     print(f"Found { len(episodes) } episodes.")
 
-    return episodes
+    context["ti"].xcom_push(key="episodes", value=episodes)
 
-def download_episodes(episodes):
+def download_episodes(**context):
     """
     Downloads audio files for the given list of podcast episodes and returns 
     a list of downloaded file information.
@@ -41,6 +41,7 @@ def download_episodes(episodes):
     Returns:
         list: A list of dictionaries containing information about the downloaded files.
     """
+    episodes = context["ti"].xcom_pull(key="episodes")
     audio_files = []
 
     for episode in episodes:
@@ -61,9 +62,7 @@ def download_episodes(episodes):
             "filename": filename
         })
 
-    return audio_files
-
-def load_episodes(episodes):
+def load_episodes(**context):
     """
     Loads podcast episodes into a SQLite database if they are not already present.
 
@@ -73,6 +72,7 @@ def load_episodes(episodes):
     Returns:
         list: A list of new episodes added to the database.
     """
+    episodes = context["ti"].xcom_pull(key="episodes")
     hook = SqliteHook(sqlite_conn_id="podcasts")
     stored_episodes = hook.get_pandas_df("SELECT * from episodes;")
     new_episodes = []
@@ -101,8 +101,6 @@ def load_episodes(episodes):
         ]
     )
 
-    return new_episodes
-
 
 with DAG(
     dag_id="podcast_summary",
@@ -128,7 +126,8 @@ with DAG(
     )
     task_get_episodes = PythonOperator(
         task_id="get_episodes",
-        python_callable=get_episodes
+        python_callable=get_episodes,
+        provide_context=True
     )
     task_download_episodes = PythonOperator(
         task_id="download_episodes",

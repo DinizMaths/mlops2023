@@ -42,16 +42,16 @@ After set the Airflow home, you need to initialize the database:
 airflow db init
 ```
 
+(Optional) If you don't want to load the examples, you can change the configuration file. In `./airflow/airflow.cfg`, change the value of `load_examples` to `False`. This will prevent the examples from being loaded.
+
+```bash
+sed -i 's/^load_examples = .*/load_examples = False/' ./airflow/airflow.cfg
+```
+
 Now, you can run the standalone mode:
     
 ```bash
 airflow standalone
-```
-
-(Optional) If you don't want to load the examples, you can change the configuration file. In `./airflow/airflow.cfg`, change the value of `load_examples` to `False`. This will prevent the examples from being loaded.
-
-```bash
-sed -i 's/^load_examples = .*/load_examples = False/' airflow.cfg
 ```
 
 Now in **other terminal**, you can run the following command to create the `episodes` folder:
