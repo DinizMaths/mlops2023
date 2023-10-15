@@ -23,7 +23,7 @@ This section contains a collection of links to projects directories focused on p
 
 📁 [Python Essential for MLOps](./Python_Essentials_for_MLOps/)
 
-# 📚 ferences
+# 📚 References
 
 [🌐 **Professor Github Repository**](https://github.com/ivanovitchm/mlops)
 
