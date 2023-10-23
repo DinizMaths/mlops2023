@@ -114,3 +114,17 @@ But, we need to make sure that the validation set and the test set come from sam
 
 - **Scenario 4**
     In Scenario 4, we have a low bias and a low variance. In this case, we have a model that can learn the data and it can generalize the data.
+
+Basic Recipe for Machine Learning:
+- If high bias, then:
+    - Try a bigger network
+    - Try a different model
+    - Try a different architecture
+    - Try a different hyperparameters
+- If high variance, then:
+    - Get more data
+    - Try regularization
+    - Try a different model
+    - Try a different architecture
+    - Try a different hyperparameters
+
