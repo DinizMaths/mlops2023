@@ -128,3 +128,11 @@ Basic Recipe for Machine Learning:
     - Try a different architecture
     - Try a different hyperparameters
 
+<p align=center>
+    <img src="https://www.researchgate.net/profile/Bo-Fu/publication/331670185/figure/fig1/AS:735471835553794@1552361558681/Model-complexity-vs-Total-Error-The-optimal-models-are-likely-to-belong-to-the-class-of.png" height=300>
+    <p align=center>
+        <a href="https://www.researchgate.net/figure/Model-complexity-vs-Total-Error-The-optimal-models-are-likely-to-belong-to-the-class-of_fig1_331670185">Source</a>
+    </p>
+</p>
+
+
