@@ -67,3 +67,50 @@ We have four types of Machine Learning:
 
 - **Hyperparameters**
     We need to choose the best hyperparameters to train the computer. We have a lot of hyperparameters to choose, like the number of layers, the number of neurons, the activation function, the optimizer, the learning rate, etc. We need to choose the best hyperparameters to train the computer.
+
+## ✨ Good Practices
+
+<p align=center>
+    <img src="https://i0.wp.com/galaxyinferno.com/wp-content/uploads/2022/06/3.png?resize=768%2C432&ssl=1" height=300>
+    <p align=center>
+        <a href="https://galaxyinferno.com/what-is-validation-data-used-for-machine-learning-basics/">Source</a>
+    </p>
+</p>
+
+Make sure that you have a good set of data. For this, you need to split your data into three sets: training set, validation set, and test set. This can make a big difference in the performance of your model.
+
+Previous Machine Learning Era:
+Train | Validation | Test
+----- | ---------- | ---
+70%   | 0%         | 30%
+60%   | 20%        | 20%
+
+Big Data Era:
+Train | Validation | Test
+----- | ---------- | ---
+98%   | 1%         | 1%
+99.5% | 0.25%      | 0.25%
+99.5% | 0.4%       | 0.1%
+
+But, we need to make sure that the validation set and the test set come from same distribution.
+
+## Bias vs Variance
+
+|                       | Scenario 1 | Scenario 2 | Scenario 3 | Scenario 4 |
+| --------------------- | ---------- | ---------- | ---------- | ---------- |
+| Train Set Error       | 1%         | 15%        | 15%        | 0.5%       |
+| Validation Set Error  | 16%        | 16%        | 30%        | 1%         |
+| **Bias**              | Low        | High       | High       | Low        |
+| **Variance**          | High       | Low        | High       | Low        |
+
+- **Scenario 1**
+    In Scenario 1, we have a low bias and a high variance. In this case, we have a model that can learn the data, but it can't generalize the data. 
+
+- **Scenario 2**
+    In Scenario 2, we have a high bias and a low variance. In this case, we have a model that can't learn the data, but it can generalize the data.
+
+- **Scenario 3**
+    In Scenario 3, we have a high bias and a high variance. In this case, we have a model that can't learn the data and it can't generalize the data.
+
+- **Scenario 4**
+    In Scenario 4, we have a low bias and a low variance. In this case, we have a model that can learn the data and it can generalize the data.
