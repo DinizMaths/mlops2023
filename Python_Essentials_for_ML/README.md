@@ -94,7 +94,7 @@ Train | Validation | Test
 
 But, we need to make sure that the validation set and the test set come from same distribution.
 
-## Bias vs Variance
+## 📏 Bias vs Variance
 
 |                       | Scenario 1 | Scenario 2 | Scenario 3 | Scenario 4 |
 | --------------------- | ---------- | ---------- | ---------- | ---------- |
@@ -135,4 +135,29 @@ Basic Recipe for Machine Learning:
     </p>
 </p>
 
+## 📊 Evaluate Classification Models
 
+- **Threshold Metrics**
+    Ratio of correct predictions (positive or negative) among all predictions made.
+
+    - Accuracy
+    - Error
+    - Sensitivity
+    - Specificity
+    - G-Mean
+    - Precision
+    - Recall
+    - Fbeta-Measure
+
+- **Ranking Metrics**
+    Based on score of class membership and variation of threshold to measure the effectiveness of classifiers.
+
+    - ROC Curve
+    - ROC AUC
+    - Precision-Recall Curve
+
+- **Probabilistic Metrics**
+    Quantify the uncertainty of the prediction.
+
+    - Log Loss
+    - Brier Score
