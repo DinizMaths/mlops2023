@@ -191,3 +191,27 @@ Basic Recipe for Machine Learning:
 
 - **False Negative (FN)**
     The model incorrectly predicts the negative class.
+
+We can extract a lot of metrics from the confusion matrix. Some of them are:
+
+$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$
+
+$\text{Error} = 1 - \text{Accuracy}$
+
+$\text{Senstivity or Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}$
+
+$\text{Specificity} = \frac{\text{TN}}{\text{TN} + \text{FP}}$
+
+$\text{G-Mean} = \sqrt{\text{Senstivity} \times \text{Specificity}}$
+
+$\text{Positive Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}$
+
+$\text{Negative Precision} = \frac{\text{TN}}{\text{TN} + \text{FN}}$
+
+$\text{Fbeta-Measure} = \frac{(1 + \beta^2)\times \text{Positive Precision} \times \text{Senstivity}}{\beta^2 \times \text{Positive Precision} + \text{Senstivity}}$
+- $\beta = 0.5$
+        More weight on positive precision
+- $\beta = 1.0$
+        Same weight on positive precision and senstivity, equal to F1-Measure
+- $\beta = 2.0$
+        More weight on senstivity
