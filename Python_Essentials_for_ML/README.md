@@ -215,3 +215,33 @@ $\text{Fbeta-Measure} = \frac{(1 + \beta^2)\times \text{Positive Precision} \tim
         Same weight on positive precision and senstivity, equal to F1-Measure
 - $\beta = 2.0$
         More weight on senstivity
+
+## 📈 ROC Curve
+
+<p align=center>
+    <img src="https://machinelearningmastery.com/wp-content/uploads/2018/08/ROC-Curve-Plot-for-a-No-Skill-Classifier-and-a-Logistic-Regression-Model.png"
+    height=300/>
+    <p align=center>
+        <a href="https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/">Source</a>
+    </p>
+</p>
+
+- **True Positive Rate (TPR)**
+    The model correctly predicts the positive class.
+
+- **False Positive Rate (FPR)**
+    The model incorrectly predicts the positive class.
+
+Usually, we use the area under the ROC curve to evaluate the model.
+
+## 📉 PR Curve
+
+<p align=center>
+    <img src="https://machinelearningmastery.com/wp-content/uploads/2018/08/Precision-Recall-Plot-for-a-No-Skill-Classifier-and-a-Logistic-Regression-Model4.png"
+    height=300/>
+    <p align=center>
+        <a href="https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/">Source</a>
+    </p>
+</p>
+
+Better than ROC curve when we have an imbalanced dataset.
