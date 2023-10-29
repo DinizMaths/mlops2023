@@ -161,3 +161,33 @@ Basic Recipe for Machine Learning:
 
     - Log Loss
     - Brier Score
+
+<p align=center>
+    <img src="https://machinelearningmastery.com/wp-content/uploads/2019/12/How-to-Choose-a-Metric-for-Imbalanced-Classification-latest.png"
+    height=500/>
+    <p align=center>
+        <a href="https://machinelearningmastery.com/tour-of-evaluation-metrics-for-imbalanced-classification/">Source</a>
+    </p>
+</p>
+
+## 🧮 Confusion Matrix
+
+<p align=center>
+    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*fxiTNIgOyvAombPJx5KGeA.png"
+    height=300/>
+    <p align=center>
+        <a href="https://towardsdatascience.com/confusion-matrix-for-your-multi-class-machine-learning-model-ff9aa3bf7826">Source</a>
+    </p>
+</p>
+
+- **True Positive (TP)**
+    The model correctly predicts the positive class.
+
+- **True Negative (TN)**
+    The model correctly predicts the negative class.
+
+- **False Positive (FP)**    
+    The model incorrectly predicts the positive class.
+
+- **False Negative (FN)**
+    The model incorrectly predicts the negative class.
