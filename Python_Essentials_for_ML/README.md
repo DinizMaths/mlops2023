@@ -1,6 +1,6 @@
 # Introduction
 
-## 🤔 What is ML (Machine Learning)?
+## 🤔 What is Machine Learning?
 
 Machine Learning is the study of computer algorithms that improve automatically through experience. In a traditional software, we have a set of rules that the computer follows to solve a problem.
 

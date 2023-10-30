@@ -23,6 +23,10 @@ This section contains a collection of links to projects directories focused on p
 
 📁 [Python Essential for MLOps](./Python_Essentials_for_MLOps/)
 
+📁 [Python Essential for Machine Learning](./Python_Essentials_for_ML/)
+
+📁 [Python Essential for Deep Learning](./Python_Essentials_for_DL/)
+
 # 📚 References
 
 [🌐 **Professor Github Repository**](https://github.com/ivanovitchm/mlops)
