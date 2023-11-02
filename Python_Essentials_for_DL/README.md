@@ -68,3 +68,5 @@ $\sigma(y) = \sigma \left(w_0 + X^t W \right)$
             <a href="https://www.v7labs.com/blog/neural-networks-activation-functions">Source</a>
         </p>
     </p>
+
+https://app.dataquest.io/view_cert/3GW5ERVTQS9GXOAXNIX0
