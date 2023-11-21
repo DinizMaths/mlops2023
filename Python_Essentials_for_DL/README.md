@@ -69,4 +69,18 @@ $\sigma(y) = \sigma \left(w_0 + X^t W \right)$
         </p>
     </p>
 
-https://app.dataquest.io/view_cert/3GW5ERVTQS9GXOAXNIX0
+# 🗂️ Projects
+
+[**🎯 Project 01**](./Project_01/) - **Text Model using Transformers**
+
+<!-- [**🎯 Project 02**](./Project_02/) - **Airflow Data Pipeline to Download Podcasts** -->
+
+# 📚 References
+
+[🏅 **Introduction to Deep Learning in TensorFlow**](https://app.dataquest.io/view_cert/3GW5ERVTQS9GXOAXNIX0)
+
+[🏅 **Sequence Models for Deep Learning**](https://app.dataquest.io/view_cert/7IDVYO692UR4CSKO36ZG)
+
+[🏅 **Natural Language Processing for Deep Learning**](https://app.dataquest.io/view_cert/F8D002085ETY5RPY6GVW)
+
+[🏅 **Building a Data Pipeline**](https://app.dataquest.io/view_cert/NRYMTU8H56I5YVXWASUH)

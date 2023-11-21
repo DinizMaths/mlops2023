@@ -92,7 +92,7 @@ Utilizing Python's logging library offers a multitude of advantages in applicati
 
 You can read more about in [**Logging in Python**](https://docs.python.org/3/library/logging.html).
 
-# Projects
+# 🗂️ Projects
 
 [**🎯 Project 01**](./Project_01/) - **Movie Recommendation System in Python**
 
@@ -100,7 +100,7 @@ You can read more about in [**Logging in Python**](https://docs.python.org/3/lib
 
 [**🎯 Project 03**](./Project_03/) - **Optimizing Model Prediction**
 
-# References
+# 📚 References
 
 [🎥 **Video**](https://youtu.be/mMltyggT_KQ)
 
